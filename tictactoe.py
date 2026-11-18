@@ -85,3 +85,14 @@ class TicTacToe():
             return True
         return False
 
+    def utility(self , player):
+        if not self.checkGameOver():
+            return None
+
+        if self.winner == "draw":
+            return 0
+        
+        if player == self.winner :
+            return 1
+        else:
+            return -1
