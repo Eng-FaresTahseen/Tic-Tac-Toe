@@ -85,6 +85,10 @@ class TicTacToe():
             return True
         return False
 
+    def makeMove(self , state):
+        self.state = state
+        self.turn = 'x' if self.turn == 'o' else 'o'
+
     def utility(self , player):
         if not self.checkGameOver():
             return None
